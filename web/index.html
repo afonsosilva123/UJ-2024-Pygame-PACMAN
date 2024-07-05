@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!--ADVANCED TASKS:
+- Can you create a form (with data validation - ask someone what this means) to receive contact inquiries?
+- Can you add a section for a blog with several articles?
+- Can you implement a FAQ section on the page?
+- (USING JS) Can you change the text of a paragraph after form submission?
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+          <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand a" href="#">Welcome to my website</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Hobbies</a>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form">Formulário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perguntas">Perguntas freq.</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container">
+        <br><br>
+        <section id="about">
+            <h2>About Me</h2>
+            <!-- UPDATE THIS -->
+            <p>André Ventura é um politico português fascista que odeia ciganos</p>
+            <div class="galeria">
+                <img src="images.jpeg">
+                <img src="download (1).jpeg" alt="">
+                <img src="" alt="">
+                <img src="download (1).webp" alt="">
+                <img src="download (2).jpeg" alt="">
+                <img src="download (2).webp" alt="">
+                <img src="download (3).jpeg" alt="">
+                <img src="download (4).jpeg" alt="">
+                <img src="download (5).jpeg" alt="">
+                <img src="download.jpeg" alt="">
+                <img src="download.webp" alt="">
+                <img src="download (6).jpeg" alt="">
+       
+            </div>
+            </section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Dizer "Vergonha</li>
+                <li>Odiar Ciganos</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>956686565</p>
+        </section>
+        <button id="form" class="" onclick="esconder()">Formulário</button>
+        <form id="f">
+            <label>Nome</label>
+            <input class="text" type="text" pattern="[a-zA-Z]+" placeholder="nome">
+            <label>Idade</label>
+            <input type="number" class="text" max="99" min="0" placeholder="idade">
+            <label>Email</label>
+            <input type="email" class="text" placeholder="email">
+            ~<label>Postal</label>
+            <input class="text" type="text" pattern="[0-9]+-[0-9]+" placeholder="postal">
+            <label>mensagem</label>
+            <textarea cols="30" rows="10" placeholder="Enviar mensagem para o Ventura"></textarea>
+            <button onclick="this.submit">Enviar</button>
+        </form>
+        <p id="aaaa">fdvfda </p>
+        <section id="perguntas"><br>
+            <h2>Perguntas Frequentes</h2>
+            <p><b>Porque odeias ciganos</b></p>
+            <p>Porque eles não pagam impostos</p>
+            <p><b>Porque estás sempre a dizer vergonha</b></p>
+            <p>Porque Portugal devia ter muita vergonha por causa da corrupção</p>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <!-- UPDATE THIS -->
+        <div>&copy; 2024 Maior rei de Portugal</div><div>a</div>
+        <div>Maior partido é o Chega</div>
+    </footer>
+</body>
+<script>
+    a=0
+    function esconder(){
+        if (a%2==0){
+            document.getElementById("f").style.display="flex"
+          
+        }
+        else{
+            document.getElementById("f").style.display="none"
+        } 
+         a++
+    }
+    document.getElementById("f").addEventListener("submit",aaaa)
+    function aaaa(){
+        document.getElementById("aaaa").innerHTML="submeteu o formulário"
+    }
+</script>
+</html> 
